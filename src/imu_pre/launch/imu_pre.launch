@@ -1,0 +1,10 @@
+<launch>
+    <!-- 启动 imu_pre_node -->
+    <node pkg="imu_pre" type="imu_pre_node" name="imu_pre_node" output="screen">
+        <!-- 这里可以添加参数，如果需要的话 -->
+    </node>
+
+    <node pkg="rviz" type="rviz" name="rviz" output="screen" 
+      args="-d $(find imu_pre)/launch/rviz.rviz" required="true">
+    </node>
+</launch>
